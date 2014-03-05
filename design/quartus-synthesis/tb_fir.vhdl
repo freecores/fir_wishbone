@@ -131,11 +131,10 @@ begin
 	dbgSignals(width*2-1  downto width)<=std_ulogic_vector(y);				-- y:32bits						
 	dbgSignals(8+width*2 downto width*2)<=std_ulogic_vector(count);		--9bits (300<512)
 	
-/*	debugger: entity work.stp(syn) port map(
+	debugger: entity work.stp(syn) port map(
 		acq_clk=>clk,														
 		acq_data_in=>std_logic_vector(dbgSignals), 		-- Type conversion: std_ulogic_vector --> std_logic_vector
 		acq_trigger_in=>"1",
 		trigger_in=>trig
 	);
-*/
 end architecture rtl;
