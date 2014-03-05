@@ -57,19 +57,6 @@ architecture rtl of tb_fir is
 	signal dbgSignals:std_ulogic_vector(127 downto 0):=(others=>'0');
 	
 	
---	component fir is generic(order:positive:=31; width:positive:=16);
---		port(
---			/* General settings. */
---			reset:in std_ulogic;			-- asserting reset will start protocol sequence transmission. To restart the re-transmission of the sequence, re-assert this reset signal, and the whole SPI sequence will be re-transmitted again.
---			clk:in std_ulogic:='0';
---			
---			/* Filter ports. */
---			u:in signed(width-1 downto 0):=(others=>'0');
---			--y:buffer signed(width*2-1 downto 0)
---			y:buffer signed(width-1 downto 0)
---		);
---	end component fir;
-    
 	/* Explicitly define all multiplications with the "*" operator to use dedicated DSP hardware multipliers. */
 	attribute multstyle:string; attribute multstyle of rtl:architecture is "dsp";	--altera:
 --	attribute mult_style:string; attribute mult_style of fir:entity is "block";		--xilinx:
