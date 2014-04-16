@@ -20,7 +20,7 @@
 	
 	@dependencies: 
 	@designer(s):
-		Daniel C.K. Kho [daniel.kho@gmail.com] | [daniel.kho@tauhop.com] | [daniel.kho@sophicdesign.com.my];
+		Daniel C.K. Kho [daniel.kho@gmail.com] | [daniel.kho@tauhop.com];
 		Tan Hooi Jing [hooijingtan@gmail.com]
 	@info: 
 	Revision History: @see Mercurial log for full list of changes.
